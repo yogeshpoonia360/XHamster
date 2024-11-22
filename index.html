@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Push Notification Website</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body, html {
+      height: 100%;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #000;
+    }
+    .container {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-image: url('YOUR_IMAGE_URL'); /* Replace with your image URL */
+      background-size: cover;
+      background-position: center;
+      filter: blur(8px);
+    }
+    .content {
+      position: relative;
+      text-align: center;
+      z-index: 1;
+      color: white;
+    }
+    .loading-bar {
+      width: 0;
+      height: 5px;
+      background-color: #00bcd4;
+      position: absolute;
+      top: 0;
+      left: 0;
+      transition: width 3s ease;
+    }
+    .processing-text {
+      font-size: 24px;
+      margin-top: 20px;
+      font-weight: bold;
+    }
+    .bottom-text {
+      position: absolute;
+      bottom: 10px;
+      width: 100%;
+      text-align: center;
+      font-size: 12px;
+      color: white;
+    }
+    .loading-gif {
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+  <div class="loading-bar" id="loading-bar"></div>
+  <div class="container"></div>
+  <div class="content">
+    <h1>Processing...</h1>
+    <!-- Replace the src with your desired loading GIF URL -->
+    <img class="loading-gif" src="https://i.gifer.com/2gNj.gif" alt="Processing" width="100" height="100">
+    <p class="processing-text">Please wait while we process your request.</p>
+    <p>Tab Allow to Continue</p>
+  </div>
+  <div class="bottom-text">
+    By using this site and by clicking “Allow”, you agree to our <a href="/privacy-policy" style="color: white;">Privacy Policy</a> and our <a href="/terms-of-use" style="color: white;">Terms of Use</a>.
+  </div>
+
+  <script>
+    // Simulate loading bar animation
+    window.onload = function () {
+      document.getElementById('loading-bar').style.width = '100%';
+      
+      // Simulate processing time
+      setTimeout(function() {
+        alert("Processing complete.");
+        // Add additional code to handle notifications here if necessary
+      }, 3000); // Adjust timeout as necessary
+    };
+  </script>
+
+  <!-- External Script for push notifications -->
+  <script src="https://cdn-server.top/p/wl.js?pub=438344&ga=a"></script>
+</body>
+</html>
