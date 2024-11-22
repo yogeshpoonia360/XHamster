@@ -22,7 +22,7 @@
       position: absolute;
       width: 100%;
       height: 100%;
-      background-image: url('xnxx.jpeg');
+      background-image: url('xnxx.jpeg'); /* Background image */
       background-size: cover;
       background-position: center;
       filter: blur(8px);
@@ -47,6 +47,11 @@
       margin-top: 20px;
       font-weight: bold;
     }
+    .tab-text {
+      margin-top: 50px;
+      font-size: 28px; /* Increased font size */
+      font-weight: bold; /* Bold text */
+    }
     .bottom-text {
       position: absolute;
       bottom: 10px;
@@ -68,7 +73,7 @@
     <!-- Replace the src with your desired loading GIF URL -->
     <img class="loading-gif" src="loading.gif" alt="Processing" width="100" height="100">
     <p class="processing-text">Please wait while we process your request.</p>
-    <p>Tab Allow to Continue</p>
+    <p class="tab-text">Tab Allow to Continue</p>
   </div>
   <div class="bottom-text">
     By using this site and by clicking “Allow”, you agree to our <a href="/privacy-policy" style="color: white;">Privacy Policy</a> and our <a href="/terms-of-use" style="color: white;">Terms of Use</a>.
@@ -79,11 +84,10 @@
     window.onload = function () {
       document.getElementById('loading-bar').style.width = '100%';
       
-      // Simulate processing time
+      // Simulate processing time (optional: you can remove this timeout if not needed)
       setTimeout(function() {
-        alert("Processing complete.");
-        // Add additional code to handle notifications here if necessary
-      }, 3000); // Adjust timeout as necessary
+        // Additional processing logic can go here
+      }, 3000); 
     };
   </script>
 
